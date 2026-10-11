@@ -17,15 +17,15 @@
         compatible = "zmk,combos";
 
         /*
-         * EISU + KANA -> Layer 6 (Settings) while held
+         * Left thumb TAB + right thumb SHIFT -> Layer 6 (Settings) while held
          *
          * Cygnus/Corne 3x6 positions:
-         * EISU = 24
-         * KANA = 35
+         * TAB (left thumb)   = 36
+         * SHIFT (right thumb) = 41
          */
         settings_layer {
             timeout-ms = <60>;
-            key-positions = <24 35>;
+            key-positions = <36 41>;
             bindings = <&mo 6>;
         };
 
@@ -58,6 +58,29 @@
             timeout-ms = <60>;
             key-positions = <7 8>;
             bindings = <&kp LANG1>;
+        };
+
+        /*
+         * O + P simultaneously -> MINUS (-)
+         * DOT + SLASH simultaneously -> SINGLE_QUOTE (')
+         * Only on the Base layers (0 = Mac, 1 = Windows)
+         *
+         * Cygnus/Corne 3x6 positions:
+         * O = 9, P = 10
+         * DOT = 33, SLASH = 34
+         */
+        hyphen_combo {
+            timeout-ms = <60>;
+            key-positions = <9 10>;
+            bindings = <&kp MINUS>;
+            layers = <0 1>;
+        };
+
+        quote_combo {
+            timeout-ms = <60>;
+            key-positions = <33 34>;
+            bindings = <&kp SINGLE_QUOTE>;
+            layers = <0 1>;
         };
 
         /*
@@ -217,12 +240,13 @@
          * GUI   Z   X   C   V   B      N   M   ,   .   /   ALT
          *
          * E+R -> 英数 (LANG2) combo, U+I -> かな (LANG1) combo
+         * O+P -> MINUS combo, DOT+SLASH -> SINGLE_QUOTE combo
          * G/H long-press -> GUI+SHIFT
          * A / ; long-press -> SHIFT
          * aerospace (macOS tiling WM) tuning: ALT <-> CONTROL swapped
          * on S/D and K/L vs. the stock layout
          *
-         *       TAB/SFT BSPC/L2 SPACE/L3   ENTER/L4 RSHIFT DEL
+         *       TAB/SFT BSPC/L3 SPACE/L2   ENTER/L4 DEL RSHIFT
          */
 
         default_layer {
@@ -240,11 +264,11 @@
 &kp N            &kp M                 &kp COMMA             &kp DOT              &kp SLASH            &kp RIGHT_ALT
 
                          &mt250 LEFT_SHIFT TAB
-                         &lt250 2 BACKSPACE
-                         &lt250 3 SPACE
+                         &lt250 3 BACKSPACE
+                         &lt250 2 SPACE
                          &lt250 4 ENTER
-                         &kp RIGHT_SHIFT
                          &kp DELETE
+                         &kp RIGHT_SHIFT
             >;
         };
 
@@ -262,10 +286,11 @@
          * CTRL  Z   X   C   V   B      N   M   ,   .   /   GUI
          *
          * E+R -> 英数 (LANG2) combo, U+I -> かな (LANG1) combo
+         * O+P -> MINUS combo, DOT+SLASH -> SINGLE_QUOTE combo
          * G/H long-press -> GUI+SHIFT
          * ; long-press -> SHIFT
          *
-         *       TAB/SFT BSPC/L2 SPACE/L3   ENTER/L5 RSHIFT DEL
+         *       TAB/SFT BSPC/L3 SPACE/L2   ENTER/L5 DEL RSHIFT
          * ==========================================================
          */
 
@@ -284,11 +309,11 @@
 &kp N            &kp M                 &kp COMMA             &kp DOT              &kp SLASH            &kp RIGHT_GUI
 
                          &mt250 LEFT_SHIFT TAB
-                         &lt250 2 BACKSPACE
-                         &lt250 3 SPACE
+                         &lt250 3 BACKSPACE
+                         &lt250 2 SPACE
                          &lt250 5 ENTER
-                         &kp RIGHT_SHIFT
                          &kp DELETE
+                         &kp RIGHT_SHIFT
             >;
         };
 
@@ -305,13 +330,13 @@
 
             bindings = <
 
-&kp PIPE         &kp EXCL              &kp AT                &kp HASH             &kp DLLR             &kp PRCNT
-&kp CARET        &kp AMPS              &kp ASTRK             &kp BSLH             &kp GRAVE            &kp TILDE
+&trans           &kp EXCL              &kp AT                &kp HASH             &kp DLLR             &kp PRCNT
+&kp CARET        &kp AMPS              &kp ASTRK             &kp BSLH             &kp GRAVE            &trans
 
-&trans           &trans                &kp LT                &kp LBRC             &kp LBKT             &kp LPAR
-&kp RPAR         &kp RBKT              &kp RBRC              &kp GT               &kp SEMI             &kp SINGLE_QUOTE
+&trans           &kp SINGLE_QUOTE      &kp LT                &kp LBRC             &kp LBKT             &kp LPAR
+&kp RPAR         &kp RBKT              &kp RBRC              &kp GT               &kp SEMI             &trans
 
-&trans           &trans                &trans                &trans               &trans               &trans
+&trans           &trans                &trans                &trans               &kp TILDE            &kp PIPE
 &kp EQUAL        &kp PLUS              &kp MINUS             &kp ASTRK            &kp SLASH            &trans
 
                          &trans
@@ -426,7 +451,7 @@
          * ==========================================================
          * Layer 6 - SETTINGS / Bluetooth
          *
-         * EISU + KANA simultaneously -> hold Layer 6
+         * Left thumb TAB + right thumb SHIFT simultaneously -> hold Layer 6
          *
          * BT 0/1 -> Mac Base, BT 2/3 -> Windows Base (macros)
          * ==========================================================
