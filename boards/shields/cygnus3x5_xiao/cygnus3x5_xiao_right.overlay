@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "cygnus_xiao.dtsi"
+#include "cygnus3x5_xiao.dtsi"
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <5>;
 };
 
 /*
@@ -22,6 +22,5 @@
         , <&gpio0 29 GPIO_ACTIVE_HIGH>   // D3 - Col2
         , <&gpio0 28 GPIO_ACTIVE_HIGH>   // D2 - Col3
         , <&gpio0 3 GPIO_ACTIVE_HIGH>    // D1 - Col4
-        , <&gpio0 2 GPIO_ACTIVE_HIGH>    // D0 - Col5
         ;
 };
