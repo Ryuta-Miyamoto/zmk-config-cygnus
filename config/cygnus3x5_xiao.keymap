@@ -267,7 +267,7 @@
          * aerospace (macOS tiling WM) tuning: ALT <-> CONTROL swapped
          * on S/D and K/L vs. the stock layout
          *
-         *       TAB/SFT BSPC/L3 SPACE/L2   ENTER/L4 DEL RSHIFT
+         *       TAB/SFT BSPC/L3 SPACE/L2   ENTER/L4 -   RSHIFT
          */
 
         default_layer {
@@ -288,7 +288,7 @@
                          &lt250 3 BACKSPACE
                          &lt250 2 SPACE
                          &lt250 4 ENTER
-                         &kp DELETE
+                         &kp MINUS
                          &kp RIGHT_SHIFT
             >;
         };
@@ -312,7 +312,7 @@
          * G/H long-press -> GUI+SHIFT
          * ; long-press -> SHIFT
          *
-         *       TAB/SFT BSPC/L3 SPACE/L2   ENTER/L5 DEL RSHIFT
+         *       TAB/SFT BSPC/L3 SPACE/L2   ENTER/L5 -   RSHIFT
          * ==========================================================
          */
 
@@ -334,7 +334,7 @@
                          &lt250 3 BACKSPACE
                          &lt250 2 SPACE
                          &lt250 5 ENTER
-                         &kp DELETE
+                         &kp MINUS
                          &kp RIGHT_SHIFT
             >;
         };
@@ -377,6 +377,8 @@
          *
          * MINUS / SLASH (outer column on 3x6) moved to the free
          * slots at the bottom-left.
+         * DELETE sits on the right thumb (same key that is MINUS on
+         * the Base layers): hold BSPC/L3 + that key -> DELETE.
          * ==========================================================
          */
 
@@ -398,7 +400,7 @@
                          &trans
                          &trans
                          &trans
-                         &trans
+                         &kp DELETE
                          &trans
             >;
         };
