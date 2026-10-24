@@ -9,7 +9,7 @@
  *
  * Based on the Cygnus 3x6 keymap (cygnus3x6_xiao branch) with the
  * outer column removed. Former outer-column keys:
- *   ESC          -> Q + W combo
+ *   ESC          -> Z + X combo
  *   TAB          -> left thumb (already there)
  *   MINUS / '    -> O + P / DOT + SLASH combos (already there)
  *   GUI/CTRL/ALT -> home-row mods (already there)
@@ -48,15 +48,15 @@
         };
 
         /*
-         * Q + W simultaneously -> ESC
+         * Z + X simultaneously -> ESC
          * (ESC lost its own key with the outer column)
          *
          * Cygnus 3x5 positions:
-         * Q = 0, W = 1
+         * Z = 20, X = 21
          */
         esc_combo {
             timeout-ms = <60>;
-            key-positions = <0 1>;
+            key-positions = <20 21>;
             bindings = <&kp ESC>;
         };
 
@@ -259,7 +259,7 @@
          * A/SFT S   D   F   G      H   J   K   L   ;/SFT
          * Z     X   C   V   B      N   M   ,   .   /
          *
-         * Q+W -> ESC combo
+         * Z+X -> ESC combo
          * C+V -> 英数 (LANG2) combo, M+COMMA -> かな (LANG1) combo
          * O+P -> MINUS combo, DOT+SLASH -> SINGLE_QUOTE combo
          * G/H long-press -> GUI+SHIFT
@@ -306,7 +306,7 @@
          * A     GUI ALT CTRL G     H   CTRL ALT GUI ;/SFT
          * Z     X   C   V   B      N   M   ,   .   /
          *
-         * Q+W -> ESC combo
+         * Z+X -> ESC combo
          * C+V -> 英数 (LANG2) combo, M+COMMA -> かな (LANG1) combo
          * O+P -> MINUS combo, DOT+SLASH -> SINGLE_QUOTE combo
          * G/H long-press -> GUI+SHIFT
