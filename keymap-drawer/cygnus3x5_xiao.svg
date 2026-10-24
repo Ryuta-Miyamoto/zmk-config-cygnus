@@ -305,8 +305,8 @@ path.combo {
 <text x="364" y="224" class="combo tap layer-activator">Media</text>
 </a></g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -513,8 +513,8 @@ path.combo {
 <text x="364" y="224" class="combo tap layer-activator">Media</text>
 </a></g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -695,8 +695,8 @@ path.combo {
 <text x="364" y="205" class="combo tap layer-activator"><tspan style="font-size: 78%">Bluetooth</tspan></text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -869,8 +869,8 @@ path.combo {
 <text x="364" y="205" class="combo tap layer-activator"><tspan style="font-size: 78%">Bluetooth</tspan></text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -1075,8 +1075,8 @@ path.combo {
 <text x="364" y="205" class="combo tap layer-activator"><tspan style="font-size: 78%">Bluetooth</tspan></text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -1277,8 +1277,8 @@ path.combo {
 <text x="364" y="205" class="combo tap layer-activator"><tspan style="font-size: 78%">Bluetooth</tspan></text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -1456,8 +1456,8 @@ path.combo {
 <text x="364" y="205" class="combo tap layer-activator"><tspan style="font-size: 78%">Bluetooth</tspan></text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
@@ -1653,8 +1653,8 @@ path.combo {
 <text x="364" y="205" class="combo tap layer-activator"><tspan style="font-size: 78%">Bluetooth</tspan></text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="42" y="29" width="28" height="26" class="combo"/>
-<text x="56" y="42" class="combo tap">Esc</text>
+<rect rx="6" ry="6" x="42" y="141" width="28" height="26" class="combo"/>
+<text x="56" y="154" class="combo tap">Esc</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
