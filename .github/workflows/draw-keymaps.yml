@@ -26,6 +26,7 @@ jobs:
       # No space after the colon, and each value quoted since it
       # contains a space - the reusable workflow's own arg parser
       # word-splits on whitespace otherwise and silently drops it.
-      draw_args: |
-        cygnus3x5_xiao:'-k crkbd/rev1 -l LAYOUT_split_3x5_3'
-        cygnus_xiao:'-z corne'
+      # All entries must stay on ONE line: the parser runs them through
+      # `eval set --`, so a newline ends the command and every entry
+      # after the first line is silently ignored.
+      draw_args: "cygnus3x5_xiao:'-k crkbd/rev1 -l LAYOUT_split_3x5_3' cygnus_xiao:'-z corne'"
