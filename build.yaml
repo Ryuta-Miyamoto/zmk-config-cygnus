@@ -16,15 +16,54 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
+# Each Cygnus variant is listed below. The XIAO builds pick their keymap
+# automatically from config/<shield name>.keymap. The nice!nano build uses
+# ZMK's stock corne shield (Corne-compatible PCB) but shares the 3x6 XIAO
+# keymap, so it selects config/cygnus_xiao.keymap explicitly (its .conf is
+# still config/corne.conf, picked by shield name). cmake-args is expanded
+# by the shell in the build workflow, so ${GITHUB_WORKSPACE} points at
+# this repository's checkout.
 ---
 include:
+  # ---- Cygnus 3x5 / XIAO BLE (config/cygnus3x5_xiao.keymap) ----
   - board: xiao_ble//zmk
     shield: cygnus3x5_xiao_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: cygnus3x5_xiao_left
 
   - board: xiao_ble//zmk
     shield: cygnus3x5_xiao_right
+    artifact-name: cygnus3x5_xiao_right
+
+  # ---- Cygnus 3x6 / XIAO BLE (config/cygnus_xiao.keymap) ----
+  - board: xiao_ble//zmk
+    shield: cygnus_xiao_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: cygnus3x6_xiao_left
 
   - board: xiao_ble//zmk
+    shield: cygnus_xiao_right
+    artifact-name: cygnus3x6_xiao_right
+
+  # ---- Cygnus 3x6 / nice!nano (same keymap as the 3x6 XIAO build) ----
+  - board: nice_nano//zmk
+    shield: corne_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DKEYMAP_FILE=${GITHUB_WORKSPACE}/config/cygnus_xiao.keymap
+    artifact-name: cygnus3x6_nicenano_left
+
+  - board: nice_nano//zmk
+    shield: corne_right
+    cmake-args: -DKEYMAP_FILE=${GITHUB_WORKSPACE}/config/cygnus_xiao.keymap
+    artifact-name: cygnus3x6_nicenano_right
+
+  # ---- Settings reset ----
+  - board: xiao_ble//zmk
     shield: settings_reset
+    artifact-name: settings_reset_xiao_ble
+
+  - board: nice_nano//zmk
+    shield: settings_reset
+    artifact-name: settings_reset_nice_nano

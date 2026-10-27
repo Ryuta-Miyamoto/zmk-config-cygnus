@@ -16,14 +16,16 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"
       config_path: "keymap_drawer.config.yaml"
-      # cygnus3x5_xiao is a custom out-of-tree shield, so it isn't in
-      # keymap-drawer's known-keyboard database. It's physically the
-      # same 3x5+3 layout as the Corne 5-column variant, so reuse the
-      # QMK crkbd LAYOUT_split_3x5_3 physical layout when drawing
-      # (-k/-l are `keymap draw` options, not `keymap parse` ones).
+      # cygnus3x5_xiao / cygnus_xiao are custom out-of-tree shields, so
+      # they aren't in keymap-drawer's known-keyboard database. Reuse
+      # matching physical layouts instead:
+      #   cygnus3x5_xiao -> QMK crkbd LAYOUT_split_3x5_3
+      #   cygnus_xiao    -> ZMK corne (3x6+3)
+      # (-k/-l/-z are `keymap draw` options, not `keymap parse` ones).
       #
-      # No space after the colon, and the value quoted since it
+      # No space after the colon, and each value quoted since it
       # contains a space - the reusable workflow's own arg parser
       # word-splits on whitespace otherwise and silently drops it.
       draw_args: |
         cygnus3x5_xiao:'-k crkbd/rev1 -l LAYOUT_split_3x5_3'
+        cygnus_xiao:'-z corne'
