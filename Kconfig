@@ -4,7 +4,7 @@ config CYGNUS_BATTERY_LED
     help
       On boot (and on wake from deep sleep) the onboard RGB LED shows the
       battery level for a moment. While USB power is present it shows the
-      charging state: blinking yellow = charging, solid green = charged.
+      charging state: blinking cyan = charging, solid green = charged.
 
 if CYGNUS_BATTERY_LED
 

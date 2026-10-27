@@ -7,7 +7,7 @@
  *     yellow >= LEVEL_LOW
  *     red    <  LEVEL_LOW
  * - USB power present:
- *     blinking yellow = charging
+ *     blinking cyan   = charging
  *     solid green     = charge complete
  * - Otherwise the LED stays off.
  *
@@ -38,7 +38,9 @@ enum color {
     COLOR_OFF = 0,
     COLOR_RED = BIT(0),
     COLOR_GREEN = BIT(1),
+    COLOR_BLUE = BIT(2),
     COLOR_YELLOW = COLOR_RED | COLOR_GREEN,
+    COLOR_CYAN = COLOR_GREEN | COLOR_BLUE,
 };
 
 static const struct gpio_dt_spec led_red = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
@@ -61,7 +63,7 @@ static bool ready;
 static void set_color(enum color c) {
     gpio_pin_set_dt(&led_red, (c & COLOR_RED) ? 1 : 0);
     gpio_pin_set_dt(&led_green, (c & COLOR_GREEN) ? 1 : 0);
-    gpio_pin_set_dt(&led_blue, 0);
+    gpio_pin_set_dt(&led_blue, (c & COLOR_BLUE) ? 1 : 0);
 }
 
 static enum color battery_color(uint8_t soc) {
@@ -117,7 +119,7 @@ static void led_work_handler(struct k_work *work) {
         }
         if (charging()) {
             /* 1 s period, 50% duty */
-            set_color((tick_count++ / 2) % 2 == 0 ? COLOR_YELLOW : COLOR_OFF);
+            set_color((tick_count++ / 2) % 2 == 0 ? COLOR_CYAN : COLOR_OFF);
         } else {
             tick_count = 0;
             set_color(COLOR_GREEN);
